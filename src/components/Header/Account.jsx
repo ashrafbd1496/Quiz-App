@@ -1,5 +1,5 @@
-import classes from "./styles/Account.module.css";
-import avatar from "/assets/images/avatar.png";
+import avatar from '../../assets/images/avatar.png';
+import classes from './Account.module.css';
 
 export default function Account() {
   return (

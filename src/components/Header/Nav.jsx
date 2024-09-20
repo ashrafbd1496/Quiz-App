@@ -1,6 +1,8 @@
-import Account from "./Accounts";
-import classes from "./styles/Nav.module.css";
-import logo from "/assets/images/quiz-logo.png";
+// import { Link } from 'react-router-dom';
+import classes from './Nav.module.css';
+import logo from '../../assets/images/quiz-logo.png';
+import Account from './Account';
+
 
 export default function Nav() {
   return (

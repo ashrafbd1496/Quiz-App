@@ -1,11 +1,15 @@
+import Home from "./pages/HomePage/HomePage";
+import Layout from "./components/Layout/Layout";
 import "./App.css";
-import Home from "./pages/Home";
-import Layout from "./components/Layout";
+import Signup from "./pages/Signup/Signup";
+import Signin from "./pages/Signin/Signin";
 
 export default function App() {
   return (
     <Layout>
-      <Home />
+      {/* <Home /> */}
+      {/* <Signup /> */}
+      <Signin />
     </Layout>
   );
 }

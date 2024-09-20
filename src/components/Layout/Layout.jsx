@@ -1,6 +1,5 @@
-import React from "react";
-import Nav from "./Nav";
-import classes from "./styles/Layout.module.css";
+import Nav from "../Header/Nav";
+import classes from "./Layout.module.css";
 
 export default function Layout({ children }) {
   return (
