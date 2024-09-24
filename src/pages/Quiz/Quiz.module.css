@@ -1,0 +1,7 @@
+.qHeading {
+  text-transform: uppercase;
+}
+.qSubHeading{
+    color: var(--secondaryColor);
+}
+

@@ -6,7 +6,9 @@ export default function Layout({ children }) {
     <div>
       <Nav />
       <main className={classes.main}>
-        <div className={classes.container}>{children}</div>
+        <div className={classes.container}>
+          {children ? children : <p>No content available</p>}
+        </div>
       </main>
     </div>
   );

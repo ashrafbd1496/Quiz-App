@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Icons+Outlined");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
+@font-face {
+  font-family: "DhaleshwariNormal";
+  src: url("/assets/fonts/DhaleshwariNormal.ttf") format("truetype");
+  font-weight: normal; /* or bold */
+  font-style: normal; /* or italic */
+}
+
 :root {
   --bodyBackground: #f2f4f8;
   --successGreen: #00ff84;
@@ -8,28 +15,32 @@
   --questionBG: #e4e8ee;
   --fontPrimary: #002333;
   --active: #2dbf64;
-  --primaryColor: #00b2b8;
-  --secondaryColor: #ff8417;
-  --bodyBgColor: #baf3eb;
-  --itemBgColor: #baf3eb;
+  --primaryColor: #05ccd1;
+  --secondaryColor: #ff842f;
+  --bodyBgColor: #cef7f1;
+  --itemBgColor: #0fd9dd;
   --textColor: #00497b;
+  --textSecondary: #ffffff;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--fontPrimary);
-  font-family: "Montserrat", sans-serif;
+  color: var(--textColor);
+  font-family: "DhaleshwariNormal", sans-serif;
+  transition: all 0.5s;
 }
 
 body {
-  background-color: var(--bodyBackground);
+  font-family: "DhaleshwariNormal", sans-serif;
+  background-color: var(--bodyBgColor);
+  background: url("./assets/images/q-bg.png") repeat center center / auto;
 }
 
 a {
   text-decoration: none;
-  color: blue;
+  color: var(--secondaryColor);
 }
 
 h4 {
@@ -76,5 +87,3 @@ h4 {
   width: 90%;
   margin: 2rem auto;
 }
-
-

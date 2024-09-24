@@ -1,8 +1,8 @@
 /* nav component */
 .nav {
   display: flex;
-  background-color: var(--itemBgColor);
-  color: #fff;
+  background-color: var(--primaryColor);
+  color: var(--textSecondary);
   position: fixed;
   left: 0;
   right: 0;
@@ -35,14 +35,18 @@
 }
 
 .nav .brand h3 {
-  font-size: 18px;
-  line-height: 19px;
-  font-weight: 700;
+  font-family: "DhaleshwariNormal", sans-serif;
+  font-size: 35px;
+  line-height: 34px;
+  font-weight: 900;
+  color: var(--textSecondary);
 }
 
 .nav .brand img {
-  width: 32px;
+  width: 200px;
+  height: 70px;
   margin-right: 10px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,7 +1,7 @@
 /* button component */
 .button {
-  background: var(--successGreen);
-  color: var(--fontPrimary);
+  background-color: var(--textSecondary);
+  color: var(--textColor);
   padding: 0.6rem 1.2rem;
   font-weight: 600;
   font-size: 15px;
@@ -13,13 +13,28 @@
   border-radius: 8px;
   cursor: pointer;
   border: 0px;
+  letter-spacing: 1px;
 }
 
 .button:hover {
-  background: var(--fontPrimary);
-  color: #fff;
+  background: var(--itemBgColor);
+  color: var(--textSecondary);
 }
 
 .button:hover span {
   color: #fff;
+}
+.button.next{
+  background-color: var(--itemBgColor);
+  margin-right: 10px;
+}
+.button.next span{
+  color: var(--textSecondary);
+}
+.button.next:hover{
+  background-color: var(--bodyBgColor);
+
+}
+.button.next:hover span{
+  color: var(--textColor);
 }
