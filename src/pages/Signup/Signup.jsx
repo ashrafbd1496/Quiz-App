@@ -1,13 +1,12 @@
 import Illustration from "../../components/Signup/Illustration";
 import { Link, useNavigate } from "react-router-dom";
-import { auth, db } from "../../firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { collection, doc, setDoc } from "firebase/firestore";
+//import { auth, db } from "../../firebase";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { collection, doc, setDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 
 import SignupForm from "../../components/Signup/SignupForm";
-import classes from "./Signup.module.css";
 import TextInput from "../../components/TextInput/TextInput";
 import CheckBox from "../../components/CheckBox/CheckBox";
 import Button from "../../components/Button/Button";
@@ -77,7 +76,7 @@ export default function Signup() {
       <h1>Create an account</h1>
       <div className="column">
         <Illustration />
-        <SignupForm className={classes.signup} onSubmit={handleSubmit}>
+        <SignupForm style={{height:"500px"}} onSubmit={handleSubmit}>
           <TextInput
             type="text"
             required

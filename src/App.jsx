@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AuthProvider } from './context/AuthContext'; // Assuming you have this set up
+import { AuthProvider } from './context/AuthContext'; 
 import "./App.css";
 import Home from "./pages/HomePage/HomePage";
 import Layout from "./components/Layout/Layout";
