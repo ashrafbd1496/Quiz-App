@@ -1,5 +1,5 @@
 import classes from "./Illustration.module.css";
-import SigninImage from "../../assets/images/signin.svg";
+import SigninImage from "../../assets/images/signin.png";
 
 export default function Illustration() {
   return (

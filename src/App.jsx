@@ -8,6 +8,7 @@ import Signin from "./pages/Signin/Signin";
 import Quiz from "./pages/Quiz/Quiz";
 import Result from "./pages/Result/Result";
 
+
 export default function App() {
   return (
     <AuthProvider>

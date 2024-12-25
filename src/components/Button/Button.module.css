@@ -1,7 +1,8 @@
 /* button component */
 .button {
-  background-color: var(--textSecondary);
-  color: var(--textColor);
+  background-color: var(--itemBgColor);
+  color: var(--textSecondary);
+  width: 100%;
   padding: 0.6rem 1.2rem;
   font-weight: 600;
   font-size: 15px;
@@ -17,12 +18,11 @@
 }
 
 .button:hover {
-  background: var(--itemBgColor);
-  color: var(--textSecondary);
+  background: var(--textSecondary);
 }
 
 .button:hover span {
-  color: #fff;
+  color: var(--textColor);
 }
 .button.next{
   background-color: var(--itemBgColor);

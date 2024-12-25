@@ -1,8 +1,5 @@
 import Illustration from "../../components/Signup/Illustration";
 import { Link, useNavigate } from "react-router-dom";
-//import { auth, db } from "../../firebase";
-// import { createUserWithEmailAndPassword } from "firebase/auth";
-// import { collection, doc, setDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 
