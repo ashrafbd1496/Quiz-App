@@ -6,7 +6,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import React, { useContext, useEffect, useState } from "react";
-import { auth } from "../firebase"; 
+import { auth } from "../firebase.js";
 
 const AuthContext = React.createContext();
 
@@ -30,6 +30,7 @@ export function AuthProvider({ children }) {
   // Signup function
   async function signup(username, email, password) {
     try {
+      setLoading(true);
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -39,24 +40,39 @@ export function AuthProvider({ children }) {
         displayName: username,
       });
 
-      // Set currentUser with updated profile
       setCurrentUser({
         ...userCredential.user,
         displayName: username,
       });
     } catch (error) {
-      console.error("Error signing up: ", error.message);
-      throw error;
+      const errorMessage =
+        error.code === "auth/email-already-in-use"
+          ? "এই ইমেইল ইতিমধ্যে ব্যবহৃত হয়েছে"
+          : error.message;
+      console.error("সাইন আপ এরর: ", errorMessage);
+      throw new Error(errorMessage);
+    } finally {
+      setLoading(false);
     }
   }
 
   // Signin function
   async function signin(email, password) {
     try {
-      return await signInWithEmailAndPassword(auth, email, password);
+      setLoading(true);
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      return result;
     } catch (error) {
-      console.error("Error signing in: ", error.message);
-      throw error;
+      const errorMessage =
+        error.code === "auth/wrong-password"
+          ? "ভুল পাসওয়ার্ড"
+          : error.code === "auth/user-not-found"
+          ? "ইউজার পাওয়া যায়নি"
+          : error.message;
+      console.error("সাইন ইন এরর: ", errorMessage);
+      throw new Error(errorMessage);
+    } finally {
+      setLoading(false);
     }
   }
 
